@@ -1,0 +1,25 @@
+h1{
+  color:blue
+}
+button{
+  color:red;
+}
+body{
+    font-family: Arial, sans-serif;
+    padding: 24px;
+    background: rgb(223, 217, 210);
+
+}
+
+#changeBtn{
+    background: rgb(1, 8, 1);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+#changeBtn:hover{
+    background: rgb(241, 7, 7);
+}
