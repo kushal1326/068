@@ -1,0 +1,81 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mood Tracker</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <h2>🌈 MoodSpace</h2>
+        <button id="themeBtn" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <header>
+        <h1>How are you feeling today?</h1>
+        <p>Take a moment for yourself. Your feelings matter.</p>
+    </header>
+
+    <section class="mood-section">
+        <h2>Select your mood</h2>
+
+        <div class="mood-options">
+            <button class="mood" data-mood="Happy" onclick="selectMood(this)">
+                😊<span>Happy</span>
+            </button>
+
+            <button class="mood" data-mood="Excited" onclick="selectMood(this)">
+                🤩<span>Excited</span>
+            </button>
+
+            <button class="mood" data-mood="Calm" onclick="selectMood(this)">
+                😌<span>Calm</span>
+            </button>
+
+            <button class="mood" data-mood="Sad" onclick="selectMood(this)">
+                😢<span>Sad</span>
+            </button>
+
+            <button class="mood" data-mood="Angry" onclick="selectMood(this)">
+                😡<span>Angry</span>
+            </button>
+
+            <button class="mood" data-mood="Tired" onclick="selectMood(this)">
+                😴<span>Tired</span>
+            </button>
+        </div>
+
+        <textarea
+            id="moodNote"
+            placeholder="Write something about your day..."
+        ></textarea>
+
+        <button class="save-btn" onclick="saveMood()">
+            Save My Mood
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="history-section">
+        <h2>My Mood History</h2>
+        <div id="history">
+            <p class="empty">Your mood entries will appear here.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ for your wellbeing</p>
+    </footer>
+
+</div>
+
+<script src="{% static 'java.js' %}"></script>
+</body>
+</html>
